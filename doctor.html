@@ -14,20 +14,20 @@
 }
 
 .doctor-section {
-  background-color: #ffffff; /* White background for the whole section */
+  background-color: #ffffff; 
   padding: 3rem 1rem;
   text-align: center;
 }
 
 .doctor-section h2 {
   font-size: 2rem;
-  color: #0d6efd; /* Bright blue heading */
+  color: #0d6efd;
   margin-bottom: 2rem;
   font-weight: bold;
 }
 
 .doctor-section p {
-  color: #333; /* Dark text for readability */
+  color: #333;
 }
 
 .doctors-grid {
@@ -37,7 +37,7 @@
 }
 
 .doctor-card {
-  background-color: #ffffff; /* forced white */
+  background-color: #ffffff; 
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2rem;
@@ -129,7 +129,7 @@
         <h2 class="section-title">Our Expert Doctors</h2>
         <p class="section-subtitle">Find the right specialist for your needs</p>
 
-        <!-- Search by location -->
+      
         <div class="search-container">
           <input type="text" id="locationSearch" placeholder="Enter location (e.g., Chennai)">
           <button id="searchBtn" class="btn btn-primary">Search</button>
@@ -196,10 +196,9 @@
         });
       }
 
-      // Initial display
+
       displayDoctors(doctors);
 
-      // Search functionality
       searchBtn.addEventListener('click', () => {
         const query = locationSearch.value.trim().toLowerCase();
         const filteredDoctors = doctors.filter(doc => doc.location.toLowerCase() === query);
@@ -211,7 +210,6 @@
         displayDoctors(doctors);
       });
 
-      // Book Appointment button → prefill doctor name in form
       document.addEventListener('click', (e) => {
         if (e.target.classList.contains('book-btn')) {
           const doctorName = e.target.getAttribute('data-doctor');
